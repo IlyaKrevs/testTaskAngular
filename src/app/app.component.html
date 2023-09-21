@@ -1,0 +1,8 @@
+<div *ngIf="userChoose">
+  {{userChoose.center}} =+= {{userChoose.zoom}}
+</div>
+<div class="mainContainer">
+  <app-my-select (choose)="showMePLs($event)" [myOptions]="myBasicCoords" [userChoose]="userChoose"></app-my-select>
+  <app-my-map [userChoose]="userChoose"></app-my-map>
+  <button (click)="checkPls()">Parent value</button>
+</div>

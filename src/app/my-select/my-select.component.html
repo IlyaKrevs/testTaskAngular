@@ -1,0 +1,8 @@
+<div *ngIf="userChoose">
+    {{userChoose.center}} =+= {{userChoose.zoom}}
+</div>
+<select [(ngModel)]="userChoose">
+    <option *ngFor="let item of myOptions" [ngValue]="item">{{item.center}} + {{item.zoom}}
+    </option>
+</select>
+<button (click)="makeChoose(userChoose)">Child value</button>

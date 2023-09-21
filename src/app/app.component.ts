@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { myCoords } from 'src/coordInterface';
+
+import { MYBASICCOORDS } from 'src/myBasicCoords';
 
 @Component({
   selector: 'app-root',
@@ -6,14 +9,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor() {
-    this.myFunc()
+
+  userChoose?: myCoords;
+
+  myBasicCoords = MYBASICCOORDS;
+
+
+  checkPls() {
+    console.log(this.userChoose)
   }
 
-  title = 'blablabla';
 
-  myFunc() {
-    console.log(this.title)
+  showMePLs(item: any) {
+    this.userChoose = item;
+
   }
-  
+
 }
